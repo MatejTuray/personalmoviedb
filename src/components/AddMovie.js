@@ -36,14 +36,17 @@ export default class AddMovie extends Component {
         let userQuery = e.target.elements[0].value
         if (userQuery !== "") {
             axios.get(`https://peaceful-oasis-31467.herokuapp.com/http://www.omdbapi.com/?t=${userQuery}&apikey=${apiKey}`).then((response) => {
-                if (response.data) {
+            console.log(response)
+            if(response.data.Error){
+                alert("Movie not found")
+            }   
+            else if (response.data) {
                     this.setState((prevState) => ({
                         data: prevState.data.concat(response.data)
                     }))
                 }
-                else if (response.Error === "Movie not found") {
-                    alert("Movie not found")
-                }
+               
+                
             }).then(() => {
 
 

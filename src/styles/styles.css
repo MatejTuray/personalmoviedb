@@ -58,13 +58,16 @@ button:disabled {
   font-size: 1rem !important;
   color: white !important; }
 
+#select {
+  color: black !important; }
+
 .btn {
   background-color: #1c2a48 !important; }
 
 #dropdown-button {
   background-color: #1c2a48 !important; }
 
-@media (min-width: 45rem) {
+@media (min-width: 900px) {
   .navbar.scrolling-navbar {
     padding: 0;
     height: 3rem; } }
@@ -164,8 +167,19 @@ button:disabled {
 
 @media (max-width: 45rem) {
   .img-add {
-    height: 20rem;
-    width: auto; } }
+    height: 15rem;
+    width: auto; }
+  #scrollable {
+    max-height: 40rem;
+    overflow-y: scroll; } }
+
+@media (max-width: 900px) {
+  .img-add {
+    height: 15rem;
+    width: auto; }
+  #scrollable {
+    max-height: 40rem;
+    overflow-y: scroll; } }
 
 .rbt-input-main.form-control.rbt-input {
   width: 25rem;
@@ -181,7 +195,7 @@ button:disabled {
   outline: none; }
 
 .navbar {
-  line-height: 0.4rem; }
+  line-height: 0.6rem; }
 
 .navbar .dropdown-menu a {
   font-weight: 400; }
@@ -194,15 +208,17 @@ button:disabled {
 
 #add {
   color: white;
-  margin-left: 1rem !important;
-  margin-right: 0.5rem !important; }
+  margin-right: 1rem; }
+
+#logout {
+  margin-top: -0.2rem; }
 
 #add:hover {
   color: grey; }
 
 #dashboard {
   color: white;
-  margin-top: 2rem; }
+  margin-right: 1rem; }
 
 #dashboard:hover {
   color: grey; }
@@ -213,12 +229,55 @@ button:disabled {
 @media (max-width: 45rem) {
   .rbt-input-main.form-control.rbt-input {
     width: 35rem;
-    color: white !important; } }
+    color: white !important; }
+  .navbar {
+    line-height: 0.8rem; }
+  #add {
+    color: white;
+    margin-left: -0.6rem;
+    margin-bottom: -0.5rem; }
+  #dashboard {
+    margin-left: -0.6rem; } }
+
+#logout-chrome {
+  margin-top: 0.5rem; }
+
+#logout {
+  margin-left: -1rem;
+  margin-top: 0.2rem; }
+
+@media (max-width: 900px) {
+  .rbt-input-main.form-control.rbt-input {
+    width: 35rem;
+    color: white !important; }
+  .navbar {
+    line-height: 0.8rem; }
+  #add {
+    color: white;
+    margin-left: -0.6rem;
+    margin-bottom: -0.5rem; }
+  #dashboard {
+    margin-left: -0.6rem; } }
+
+#logout {
+  margin-left: -1rem;
+  margin-top: 0.2rem; }
 
 @media (max-width: 500px) {
   .rbt-input-main.form-control.rbt-input {
     width: 19rem;
-    color: white !important; } }
+    color: white !important; }
+  .navbar {
+    line-height: 0.8rem; }
+  #add {
+    color: white;
+    margin-left: -0.6rem;
+    margin-bottom: -0.5rem; }
+  #dashboard {
+    margin-left: -0.6rem; }
+  #logout {
+    margin-left: -1rem;
+    margin-top: 0.2rem; } }
 
 .bq-primary {
   color: #eceff1 !important;
@@ -251,11 +310,13 @@ button:disabled {
 
 .react-datepicker-ignore-onclickoutside {
   padding-top: 0.8rem;
-  padding-bottom: 0.8rem; }
+  padding-bottom: 0.8rem;
+  padding-right: 1.3rem; }
 
 input {
   padding-top: 0.8rem;
-  padding-bottom: 0.8rem; }
+  padding-bottom: 0.8rem;
+  padding-right: 1.3rem; }
 
 @media (max-width: 45rem) {
   #textarea-title {
@@ -278,6 +339,33 @@ input {
     font-size: 1rem; }
   .note {
     font-size: 1rem; }
+  .widget-svg {
+    width: 1rem !important;
+    height: 1rem !important; }
+  blockquote {
+    line-height: 1.2rem; } }
+
+@media (max-width: 900px) {
+  #textarea-title {
+    font-size: 1rem; }
+  #textarea-subtitle {
+    font-size: 0.8rem; }
+  #textarea-plot {
+    font-size: 0.7rem; }
+  #year {
+    font-size: 1rem;
+    margin-top: -0.03rem; }
+  .type {
+    font-size: 1rem;
+    margin-bottom: 1rem; }
+  .user {
+    font-size: 0.8rem; }
+  .userdata {
+    font-size: 0.8rem; }
+  .datetowatch {
+    font-size: 0.8rem; }
+  .note {
+    font-size: 0.8rem; }
   .widget-svg {
     width: 1rem !important;
     height: 1rem !important; }
