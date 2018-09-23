@@ -135,7 +135,7 @@ export default class HeaderPrivate extends Component {
                             </NavbarNav> : <NavbarNav left>
                                     {window.location.pathname === "/dashboard" ? <NavItem active>
                                         <br />
-                                        <Navlink to="/dashboard">Dashboard</Navlink>
+                                        <NavLink to="/dashboard">Dashboard</NavLink>
                                     </NavItem> : <NavItem>
                                             <br />
                                             <NavLink  to="/dashboard">Dashboard</NavLink>
