@@ -108,20 +108,20 @@ export default class HeaderPrivate extends Component {
 
                         {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
                         <Collapse isOpen={this.state.collapse} navbar>
-                           {is.chrome() === false ? <NavbarNav left>
+                            {is.chrome() === false ? <NavbarNav left>
                                 {window.location.pathname === "/dashboard" ? <NavItem active>
-                                <br/>
+                                    <br />
                                     <Link id="dashboard" to="/dashboard">Dashboard</Link>
                                 </NavItem> : <NavItem>
-                                <br/>
+                                        <br />
                                         <Link id="dashboard" to="/dashboard">Dashboard</Link>
                                     </NavItem>}
-                                    
+
                                 {window.location.pathname === "/add" ? <NavItem active>
-                                     <br/>
+                                    <br />
                                     <Link id="add" to="/add">Add</Link>
                                 </NavItem> : <NavItem>
-                                     <br/>
+                                        <br />
                                         <Link id='add' to="/add">Add</Link>
                                     </NavItem>}
                                 <NavItem>
@@ -138,7 +138,7 @@ export default class HeaderPrivate extends Component {
                                         <NavLink to="/dashboard">Dashboard</NavLink>
                                     </NavItem> : <NavItem>
                                             <br />
-                                            <NavLink  to="/dashboard">Dashboard</NavLink>
+                                            <NavLink to="/dashboard">Dashboard</NavLink>
                                         </NavItem>}
 
                                     {window.location.pathname === "/add" ? <NavItem active>
@@ -150,7 +150,7 @@ export default class HeaderPrivate extends Component {
                                         </NavItem>}
                                     <NavItem>
                                         <Dropdown>
-                                            <DropdownToggle nav caret>{this.props.username}</DropdownToggle>
+                                            <DropdownToggle id="logout-chrome" nav caret>{this.props.username}</DropdownToggle>
                                             <DropdownMenu>
                                                 <DropdownItem href="#" onClick={(e) => { this.handleLogout(e) }}>Log out</DropdownItem>
                                             </DropdownMenu>
@@ -191,7 +191,7 @@ export default class HeaderPrivate extends Component {
                 }} /> : undefined}
 
             </div>
-         
+
         )
     }
 }
