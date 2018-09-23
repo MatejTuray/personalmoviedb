@@ -35,7 +35,7 @@ export default class AddMovie extends Component {
         })
         let userQuery = e.target.elements[0].value
         if (userQuery !== ""){
-        axios.get(`https://peaceful-oasis-31467.herokuapp.com/http://www.omdbapi.com/?t=${userQuery}&plot=full&apikey=${apiKey}`).then((response) => {
+        axios.get(`https://peaceful-oasis-31467.herokuapp.com/http://www.omdbapi.com/?t=${userQuery}&apikey=${apiKey}`).then((response) => {
             this.setState((prevState) => ({
                 data: prevState.data.concat(response.data)
             }))
