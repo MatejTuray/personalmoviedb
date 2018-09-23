@@ -22,6 +22,7 @@ class App extends Component {
     this.handleReturn = this.handleReturn.bind(this)
     this.handleSignInGoogle = this.handleSignInGoogle.bind(this)
     this.handleLogInGoogle = this.handleLogInGoogle.bind(this)
+    this.handleWindowClose = this.handleWindowClose.bind(this)
     this.state = {
       shouldRedirect: false,
       isAuthenticated: false,
@@ -34,7 +35,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-
+       window.addEventListener('onbeforeunload', this.handleWindowClose);
     setTimeout(() => {
       this.setState({
         isAuthenticated: false,
@@ -146,6 +147,16 @@ class App extends Component {
     alert("You have been logged out")
 
   }
+  handleWindowClose(){
+    axios({
+      method: 'DELETE', url: `https://peaceful-oasis-31467.herokuapp.com/https://guarded-chamber-92596.herokuapp.com/users/me/token`, headers: {
+        "x-auth": this.props.token
+      },
+    }).then((response) => {
+
+
+    }).catch((err) => console.log(err))
+  }
   handleReturn(search) {
 
  
@@ -155,6 +166,7 @@ class App extends Component {
     console.log(this.state)
   }
   componentWillUnmount() {
+     window.removeEventListener('onbeforeunload', this.handleWindowClose);
     axios({
       method: 'DELETE', url: `https://peaceful-oasis-31467.herokuapp.com/https://guarded-chamber-92596.herokuapp.com/users/me/token`, headers: {
         "x-auth": this.props.token
@@ -176,7 +188,7 @@ class App extends Component {
           <Route path="/add" render={() => { return this.state.isAuthenticated ? <AddMovie handleReturn={this.handleReturn} handleDeleteToken={this.handleDeleteToken} _id={this.state._id} token={this.state.token} username={this.state.username} /> : <Redirect to="/" /> }} />
           <Route path="/findmovie" render={() => { return this.state.isAuthenticated ? <FindMovie handleReturn={this.handleReturn} query={this.state.query} handleDeleteToken={this.handleDeleteToken} _id={this.state._id} token={this.state.token} username={this.state.username} /> : <Redirect to="/" /> }} />
         </Switch>
-
+      
       </BrowserRouter>
     );
   }
