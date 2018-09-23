@@ -166,37 +166,7 @@ export default class HeaderPrivate extends Component {
                 }} /> : undefined}
 
             </div>
-            //     <div className="container-fluid">
-            //         <p>{this.state.user}</p>
-            //         {window.location.pathname === "/dashboard" ? <button><Link to="/add" >Add new movie</Link></button> : <button><Link to="/dashboard">Dashboard</Link></button>}
-            //         {(this.state.redirect === true && window.location.pathname !== `/findmovie`) ? <Redirect to={{
-            //             pathname: "/findmovie",
-            //             state: { event: "test" }
-            //         }} /> : undefined}
-            //         {window.location.pathname !== `/findmovie` ? <FormInline classname="mdb-form" onSubmit={this.handleSearch}>
-
-            // <Button><i className="fas fa-search">
-            //             </i></Button>
-
-            //             <Typeahead
-            //                 id = "typeahead"
-            //                 className="mr-3 w-75"
-            //                 onChange={(value) => {
-            //                     this.handleChange(value);
-            //                 }}
-            //                 options={this.state.searchOptions}
-            //                 selected={this.state.searchVal}
-            //                 placeholder="Search your library"
-            //             />
-
-
-
-
-
-            //         </FormInline>
-            //             : undefined}
-            //         <button onClick={(e) => { this.handleLogout(e) }}>Log out</button>
-            //     </div>
+         
         )
     }
 }
