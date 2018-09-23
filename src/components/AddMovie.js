@@ -7,7 +7,7 @@ import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import { Container, Row, Col, Input, Button, Fa, Animation } from 'mdbreact';
 import 'react-datepicker/dist/react-datepicker.css';
-import {apiKey} from "./config"
+import { apiKey } from "./config"
 export default class AddMovie extends Component {
     constructor(props) {
         super(props)
@@ -34,25 +34,29 @@ export default class AddMovie extends Component {
             data: [],
         })
         let userQuery = e.target.elements[0].value
-        if (userQuery !== ""){
-        axios.get(`https://peaceful-oasis-31467.herokuapp.com/http://www.omdbapi.com/?t=${userQuery}&apikey=${apiKey}`).then((response) => {
-            this.setState((prevState) => ({
-                data: prevState.data.concat(response.data)
-            }))
-        }).then(() => {
-            let year = this.state.data[0].Year;
-            let rating = parseInt(this.state.data[0].imdbRating)
+        if (userQuery !== "") {
+            axios.get(`https://peaceful-oasis-31467.herokuapp.com/http://www.omdbapi.com/?t=${userQuery}&apikey=${apiKey}`).then((response) => {
+                if (response.data) {
+                    this.setState((prevState) => ({
+                        data: prevState.data.concat(response.data)
+                    }))
+                }
+                else {
+                    alert("Movie not found")
+                }
+            }).then(() => {
 
-            this.setState({
-                isLoading: false,
-                hasCompleted: true,
 
-            });
-        }).catch((e) => console.log(e))
-    }
-    else{
-        alert("Please enter a valid movie/tv show title")
-    }
+                this.setState({
+                    isLoading: false,
+                    hasCompleted: true,
+
+                });
+            }).catch((e) => console.log(e))
+        }
+        else {
+            alert("Please enter a valid movie/tv show title")
+        }
     }
     handleAddMovie() {
 
@@ -64,7 +68,7 @@ export default class AddMovie extends Component {
             ; this.setState({
                 shouldRedirect: true
             })
-          
+
         }).catch((err) => console.log(err))
 
 
@@ -93,7 +97,7 @@ export default class AddMovie extends Component {
                             <form onSubmit={this.searchApi}>
                                 <p className="h5 text-center mb-4">Find movies and tv shows to add to your collection</p>
                                 <div className="grey-text">
-                                    <Input label="Search" icon="search" group type="text" validate error="wrong" success="right" required/>
+                                    <Input label="Search" icon="search" group type="text" validate error="wrong" success="right" required />
                                 </div>
                                 <div className="text-center">
                                     <button className="btn btn-primary" >Find movie <Fa icon="paper-plane-o" className="ml-1" /></button>
@@ -105,7 +109,7 @@ export default class AddMovie extends Component {
                 <div className="container">
                     <div className="row mt-2">
                         <div className="col-lg-12">
-                                {this.state.isLoading === true ? <div className="mt-5 d-flex align-items-center justify-content-center "><div className="nb-spinner"></div></div> : undefined}
+                            {this.state.isLoading === true ? <div className="mt-5 d-flex align-items-center justify-content-center "><div className="nb-spinner"></div></div> : undefined}
                             {this.state.data.map((movie) => <Animation type="fadeIn"><MovieCard type={movie.Type} key={movie.Title} name={movie.Title} year={movie.Year} director={movie.Director} poster={movie.Poster} rating={movie.imdbRating} plot={movie.Plot} imdbID={movie.imdbID} /></Animation>)}
                             {this.state.data[0] !== undefined ? <Animation type="fadeIn"><div className="d-flex justify-content-space-around">
                                 <div className="row">
