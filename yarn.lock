@@ -4072,9 +4072,9 @@ is-wsl@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
 
-is.js@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/is.js/-/is.js-0.0.2.tgz#18906dfde67593b223eed6428bc66e7fffc43b72"
+is_js@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/is_js/-/is_js-0.9.0.tgz#0ab94540502ba7afa24c856aa985561669e9c52d"
 
 isarray@0.0.1:
   version "0.0.1"

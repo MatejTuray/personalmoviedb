@@ -8,7 +8,7 @@ import { Redirect } from "react-router-dom";
 
 import { FormInline, Input, Fa, Button } from "mdbreact"
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
-const is = require("is-js");
+const is = require("is_js");
 export default class HeaderPrivate extends Component {
     constructor(props) {
         super(props)
