@@ -86,7 +86,7 @@
 }
 
 .img-add{
-    height: 20rem;
+    height: 40rem;
     width: auto;
 }
 .img-modal{
@@ -96,9 +96,15 @@
 
 @media (max-width: $desktop-breakpoint){
     .img-add{
-    height: 20rem;
+    height: 15rem;
     width: auto;
     
     }
 }
-
+@media (max-width: 900px){
+    .img-add{
+    height: 15rem;
+    width: auto;
+    
+    }
+}

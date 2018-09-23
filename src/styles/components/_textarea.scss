@@ -79,3 +79,45 @@ input{
         line-height: 1.2rem;
     }
 }
+@media (max-width: 900px){
+     #textarea-title{
+        font-size: 1rem;
+    }
+    #textarea-subtitle{
+        font-size: 0.8rem;
+    }
+    #textarea-plot{
+        font-size: 0.7rem
+
+    }
+    #year{
+        font-size: 1rem;
+        margin-top: -0.03rem;
+    }
+    .type{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        
+    }
+    .user{
+        font-size: 0.8rem;
+    }
+    .userdata{
+        font-size: 0.8rem;
+    }
+    .datetowatch{
+        font-size: 0.8rem;
+    }
+    .note{
+        font-size: 0.8rem;
+    }
+    .widget-svg{
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+    blockquote{
+        line-height: 1.2rem;
+    }
+
+}
+
