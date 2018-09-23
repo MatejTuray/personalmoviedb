@@ -100,6 +100,10 @@
     width: auto;
     
     }
+    #scrollable{
+    max-height:40rem;
+    overflow-y: scroll;
+}
 }
 @media (max-width: 900px){
     .img-add{
@@ -107,4 +111,8 @@
     width: auto;
     
     }
+    #scrollable{
+    max-height:40rem;
+    overflow-y: scroll;
+}
 }
