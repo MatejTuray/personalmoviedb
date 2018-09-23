@@ -12,7 +12,9 @@
     overflow: hidden;
     outline:none;
 }
-
+.navbar{
+    line-height: 0.4rem;
+}
 .navbar .dropdown-menu a{
     font-weight: 400;
 }
@@ -22,7 +24,21 @@
     color: white !important;
     margin-right: 0.5rem;
 }
-
+#add{
+    color:white;
+    margin-left: 1rem !important;
+    margin-right: 0.5rem !important;
+}
+#add:hover{
+    color:grey;
+}
+#dashboard{
+    color:white;
+    margin-top: 2rem;
+}
+#dashboard:hover{
+    color:grey;
+}
 ::placeholder{
     color: darken(white,10) !important;
 }
