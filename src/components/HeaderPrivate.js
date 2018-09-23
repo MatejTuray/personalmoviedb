@@ -108,15 +108,15 @@ export default class HeaderPrivate extends Component {
                         {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
                         <Collapse isOpen={this.state.collapse} navbar>
                             <NavbarNav left>
-                                {window.location.pathname === "/dashboard" ? <NavItem active>
-                                    <Link to="/dashboard">Dashboard</Link>
-                                </NavItem> : <NavItem>
-                                        <Link to="/dashboard">Dashboard</Link>
+                                {window.location.pathname === "/dashboard" ? <NavItem href="/dashboard" active>
+                                    Dashboard
+                                </NavItem> : <NavItem href="/dashboard">
+                                        Dashboard
                                     </NavItem>}
-                                {window.location.pathname === "/add" ? <NavItem active>
-                                    <Link to="/add">Add</Link>
-                                </NavItem> : <NavItem>
-                                        <Link to="/add">Add</Link>
+                                {window.location.pathname === "/add" ? <NavItem  href="/add" active>
+                                    Add
+                                </NavItem> : <NavItem href="/add">
+                                        Add
                                     </NavItem>}
                                 <NavItem>
                                     <Dropdown>
