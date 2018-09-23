@@ -109,14 +109,14 @@ export default class HeaderPrivate extends Component {
                         <Collapse isOpen={this.state.collapse} navbar>
                             <NavbarNav left>
                                 {window.location.pathname === "/dashboard" ? <NavItem active>
-                                    <NavLink to="/dashboard"><a href="/dashboard">Dashboard</a></NavLink>
+                                    <a href="/dashboard">Dashboard</a>
                                 </NavItem> : <NavItem>
-                                        <NavLink to="/dashboard"><a href="/dashboard">Dashboard</a></NavLink>
+                                        <a href="/dashboard">Dashboard</a>
                                     </NavItem>}
                                 {window.location.pathname === "/add" ? <NavItem active>
-                                    <NavLink to="/add"><a href="/add">Add</a></NavLink>
+                                    <a href="/add">Add</a>
                                 </NavItem> : <NavItem>
-                                        <NavLink to="/add"><a href="/add">Add</a></NavLink>
+                                        <a href="/add">Add</a>
                                     </NavItem>}
                                 <NavItem>
                                     <Dropdown>

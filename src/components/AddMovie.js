@@ -34,6 +34,7 @@ export default class AddMovie extends Component {
             data: [],
         })
         let userQuery = e.target.elements[0].value
+        if (userQuery !== ""){
         axios.get(`https://peaceful-oasis-31467.herokuapp.com/http://www.omdbapi.com/?t=${userQuery}&plot=full&apikey=${apiKey}`).then((response) => {
             this.setState((prevState) => ({
                 data: prevState.data.concat(response.data)
@@ -48,6 +49,10 @@ export default class AddMovie extends Component {
 
             });
         }).catch((e) => console.log(e))
+    }
+    else{
+        alert("Please enter a valid movie/tv show title")
+    }
     }
     handleAddMovie() {
 
@@ -88,7 +93,7 @@ export default class AddMovie extends Component {
                             <form onSubmit={this.searchApi}>
                                 <p className="h5 text-center mb-4">Find movies and tv shows to add to your collection</p>
                                 <div className="grey-text">
-                                    <Input label="Search" icon="search" group type="text" validate error="wrong" success="right" />
+                                    <Input label="Search" icon="search" group type="text" validate error="wrong" success="right" required/>
                                 </div>
                                 <div className="text-center">
                                     <button className="btn btn-primary" >Find movie <Fa icon="paper-plane-o" className="ml-1" /></button>
