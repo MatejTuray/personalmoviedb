@@ -77,7 +77,7 @@ export default class HeaderPrivate extends Component {
         e.preventDefault()
 
         let search = this.state.searchVal[0]
-        
+        console.log(search)
         this.props.handleReturn(this.state.movies.find((movie) => search === movie.name))
 
         this.state.movies.find((movie) => {
@@ -108,15 +108,15 @@ export default class HeaderPrivate extends Component {
                         {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
                         <Collapse isOpen={this.state.collapse} navbar>
                             <NavbarNav left>
-                                {window.location.pathname === "/dashboard" ? <NavItem href="/dashboard" active>
-                                    Dashboard
-                                </NavItem> : <NavItem href="/dashboard">
-                                        Dashboard
+                                {window.location.pathname === "/dashboard" ? <NavItem active>
+                                    <NavLink to="/dashboard"><a href="/dashboard">Dashboard</a></NavLink>
+                                </NavItem> : <NavItem>
+                                        <NavLink to="/dashboard"><a href="/dashboard">Dashboard</a></NavLink>
                                     </NavItem>}
-                                {window.location.pathname === "/add" ? <NavItem  href="/add" active>
-                                    Add
-                                </NavItem> : <NavItem href="/add">
-                                        Add
+                                {window.location.pathname === "/add" ? <NavItem active>
+                                    <NavLink to="/add"><a href="/add">Add</a></NavLink>
+                                </NavItem> : <NavItem>
+                                        <NavLink to="/add"><a href="/add">Add</a></NavLink>
                                     </NavItem>}
                                 <NavItem>
                                     <Dropdown>
