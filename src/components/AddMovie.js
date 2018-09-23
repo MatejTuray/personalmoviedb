@@ -41,7 +41,7 @@ export default class AddMovie extends Component {
                         data: prevState.data.concat(response.data)
                     }))
                 }
-                else if(response.error) {
+                else if (response.Error === "Movie not found") {
                     alert("Movie not found")
                 }
             }).then(() => {
