@@ -8,6 +8,7 @@ import { Redirect } from "react-router-dom";
 
 import { FormInline, Input, Fa, Button } from "mdbreact"
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
+const is = require("is-js");
 export default class HeaderPrivate extends Component {
     constructor(props) {
         super(props)
@@ -107,7 +108,7 @@ export default class HeaderPrivate extends Component {
 
                         {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
                         <Collapse isOpen={this.state.collapse} navbar>
-                            <NavbarNav left>
+                           {is.chrome() === false ? <NavbarNav left>
                                 {window.location.pathname === "/dashboard" ? <NavItem active>
                                 <br/>
                                     <Link id="dashboard" to="/dashboard">Dashboard</Link>
@@ -131,7 +132,31 @@ export default class HeaderPrivate extends Component {
                                         </DropdownMenu>
                                     </Dropdown>
                                 </NavItem>
-                            </NavbarNav>
+                            </NavbarNav> : <NavbarNav left>
+                                    {window.location.pathname === "/dashboard" ? <NavItem active>
+                                        <br />
+                                        <Navlink to="/dashboard">Dashboard</Navlink>
+                                    </NavItem> : <NavItem>
+                                            <br />
+                                            <NavLink  to="/dashboard">Dashboard</NavLink>
+                                        </NavItem>}
+
+                                    {window.location.pathname === "/add" ? <NavItem active>
+                                        <br />
+                                        <NavLink to="/add">Add</NavLink>
+                                    </NavItem> : <NavItem>
+                                            <br />
+                                            <NavLink to="/add">Add</NavLink>
+                                        </NavItem>}
+                                    <NavItem>
+                                        <Dropdown>
+                                            <DropdownToggle id="logout" nav caret>{this.props.username}</DropdownToggle>
+                                            <DropdownMenu>
+                                                <DropdownItem href="#" onClick={(e) => { this.handleLogout(e) }}>Log out</DropdownItem>
+                                            </DropdownMenu>
+                                        </Dropdown>
+                                    </NavItem>
+                                </NavbarNav>}
                             <NavbarNav right>
                                 <NavItem>
                                     <FormInline className="ml-3 md-form" onSubmit={this.handleSearch}>
