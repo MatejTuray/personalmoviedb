@@ -125,7 +125,7 @@ export default class HeaderPrivate extends Component {
                                     </NavItem>}
                                 <NavItem>
                                     <Dropdown>
-                                        <DropdownToggle nav caret>{this.props.username}</DropdownToggle>
+                                        <DropdownToggle id="logout" nav caret>{this.props.username}</DropdownToggle>
                                         <DropdownMenu>
                                             <DropdownItem href="#" onClick={(e) => { this.handleLogout(e) }}>Log out</DropdownItem>
                                         </DropdownMenu>
