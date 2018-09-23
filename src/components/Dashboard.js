@@ -317,9 +317,9 @@ class Dashboard extends React.Component {
                             <h5 className="text-black mt-2">Filters:</h5>
                             <form onSubmit={(e) => this.handleSubmit(e)}>
                                 <div className="form-row align-items-space-around mb-2">
-                                    <div className="col-lg-6 h-100 w-100 mt-2 col-sm-12">
+                                    <div id = "select" className="col-lg-6 h-100 w-100 mt-2 col-sm-12">
                                         <Select
-                                            className="react-select"
+                                           
                                             closeMenuOnSelect={true}
                                             components={makeAnimated()}
                                             options={options}
