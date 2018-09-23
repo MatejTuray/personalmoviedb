@@ -1,0 +1,44 @@
+.rbt-input-main.form-control.rbt-input{
+    width: 25rem;
+    color: white !important;
+}
+#searchbtn{
+    
+    padding: -0.16rem 2.14rem !important;
+       background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.navbar .dropdown-menu a{
+    font-weight: 400;
+}
+.btn-outline-primary{
+    border:none !important;
+    padding: 0 !important;
+    color: white !important;
+    margin-right: 0.5rem;
+}
+
+::placeholder{
+    color: darken(white,10) !important;
+}
+@media (max-width: $desktop-breakpoint){
+.rbt-input-main.form-control.rbt-input{
+    width: 35rem;
+    color: white !important;
+}
+
+
+}
+@media ( max-width: 500px ){
+.rbt-input-main.form-control.rbt-input{
+    width: 19rem;
+    color: white !important;
+}
+
+
+}

@@ -1,0 +1,80 @@
+.bq-primary{
+    color: #eceff1 !important;
+    border-left: 3px solid  #eceff1 !important;
+}
+#textarea-title{
+    color: #eceff1 !important;
+    font-size: $l-size;
+}
+#textarea-subtitle{
+    font-size: 2.8rem;
+    color: darken(#eceff1,10) ;
+}
+.type{
+    font-size: $l-size;
+}
+#textarea-plot{
+    font-size: $m-size;
+}
+#year{
+    margin-top: 0.4rem;
+    font-size: 2.8rem;
+    color: #eceff1 ;
+}
+.userdata{
+    line-height: 1rem;
+}
+.datetowatch{
+    margin-bottom: 1rem;
+    
+}
+.react-datepicker-ignore-onclickoutside{
+     padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+
+}
+input{
+   padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  
+}
+@media (max-width: $desktop-breakpoint){
+    #textarea-title{
+        font-size: 1.4rem;
+    }
+    #textarea-subtitle{
+        font-size: 1.2rem;
+    }
+    #textarea-plot{
+        font-size: 1rem
+
+    }
+    #year{
+        font-size: 1.4rem;
+        margin-top: -0.03rem;
+    }
+    .type{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        
+    }
+    .user{
+        font-size: 1rem;
+    }
+    .userdata{
+        font-size: 1rem;
+    }
+    .datetowatch{
+        font-size: 1rem;
+    }
+    .note{
+        font-size: 1rem;
+    }
+    .widget-svg{
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+    blockquote{
+        line-height: 1.2rem;
+    }
+}

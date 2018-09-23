@@ -1,0 +1,104 @@
+
+.container-img-test{    
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    border: none;
+    background: white;
+    max-width: 20rem;
+    cursor: pointer;
+}
+.container-img-test:hover{
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+   
+    
+}
+.grid-img{
+ border:none;
+}
+.card-img-top{
+    min-height: 23rem;
+    max-height: 25rem;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    border: none;
+    
+}
+
+.fas.fa-star{
+    color: goldenrod;
+}
+#update{
+      position: absolute;
+  top: 99%;
+  left: 45%;
+  transform: translate(-50%, -150%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: black;
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  
+}
+
+#delete{
+          position: absolute;
+  top: 99%;
+  left: 59%;
+  transform: translate(-50%, -150%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: black;
+   font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  
+  
+}
+.container-img-test:hover> .card-img-top{
+    opacity: .5;
+}
+#edit{
+              position: absolute;
+  top: 99%;
+  left: 74%;
+  transform: translate(-50%, -150%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: black;
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+ 
+}
+#scrollable{
+    max-height:60rem;
+    overflow-y: scroll;
+}
+
+.img-add{
+    height: 40rem;
+    width: auto;
+}
+.img-modal{
+    height:15rem;
+    width: auto;
+}
+
+@media (max-width: $desktop-breakpoint){
+    .img-add{
+    height: 20rem;
+    width: auto;
+    
+    }
+}
+

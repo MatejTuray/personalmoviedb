@@ -1,0 +1,82 @@
+
+html{
+    font-size: 100%;
+    min-height: 100%;
+background: #283048;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+
+body{
+    font-family: Roboto, Helvetica, Arial,  sans-serif;
+    font-size: 1rem;
+background: #283048;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+   
+    
+P{
+    color: white;
+}
+
+}
+.card-img-top{
+    width: 20rem;
+    height: auto
+}
+.list-img{
+    max-width: 20rem;
+    height: auto
+}
+#nav{
+    padding: 0;
+}
+h1{
+    font-size: 2.5rem;
+}
+button{
+    cursor: pointer;
+}
+
+button:disabled{
+    color: $off-white;
+    cursor: not-allowed;
+}
+.active{
+    color: white !important;
+    
+}
+.form-control{
+    color: white!important;
+}
+.md-form label{
+font-size: 1rem !important;
+color: white !important;
+}
+.btn{
+    background-color: #1c2a48 !important;
+}
+#dropdown-button{
+     background-color: #1c2a48 !important;
+}
+
+@media (min-width: $desktop-breakpoint){
+    .navbar.scrolling-navbar{
+    padding: 0;
+    height: 3rem;
+}
+}

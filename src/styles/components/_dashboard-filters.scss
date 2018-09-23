@@ -1,0 +1,49 @@
+.react-select{
+    color: black;
+}
+.css-1rtrksz{
+    padding: 7px 7px !important; 
+    
+}
+.css-1aya2g8{
+    border-radius: 0% !important;
+}
+#btn-filter{
+    margin-left: -0.08rem;
+}
+.dropdown-menu.show{
+    width: 100%;
+    
+}
+#dropdown-button{
+    padding-left: 6.2rem !important;
+    padding-right: 6.55rem !important;
+}
+#btn-sort{
+    margin-left: -0.08rem;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.75rem + 2px);
+    border-radius:0rem;
+}
+@media (max-width: $desktop-breakpoint){
+    #dropdown-button{
+          padding-left: 14.2rem !important;
+    padding-right: 13.95rem !important;
+
+    }
+}
+@media (max-width: 500px){
+      #dropdown-button{
+ padding-left: 8.4rem !important;
+    padding-right: 7.6rem !important;
+    }
+}
+
+@media (max-width: 320px){
+      #dropdown-button{
+      padding-left: 6.4rem !important;
+    padding-right: 6.2rem !important;
+
+    }
+}
