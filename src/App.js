@@ -112,7 +112,7 @@ class App extends Component {
 
   handleSignUp(e) {
     e.preventDefault()
-    console.log(e.target.elements)
+    
     let username = e.target.elements[0].value
     let email = e.target.elements[1].value
     let password = e.target.elements[3].value
@@ -163,7 +163,7 @@ class App extends Component {
     this.setState({
       query: [search]
     })
-    console.log(this.state)
+   
   }
   componentWillUnmount() {
      window.removeEventListener('onbeforeunload', this.handleWindowClose);
