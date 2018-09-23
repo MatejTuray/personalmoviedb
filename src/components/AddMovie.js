@@ -118,7 +118,7 @@ export default class AddMovie extends Component {
                                     </div>
                                     <div className="col-lg-6 col-sm-6">
                                         <p>Your note:</p>
-                                        <textarea onChange={this.handleNoteChange} maxLength={70} placeholder="Some personal note about this movie"></textarea>
+                                        <textarea classname="p-1" onChange={this.handleNoteChange} maxLength={70} placeholder="Some personal note about this movie"></textarea>
                                     </div>
                                 </div>
                                 <div className="row">
