@@ -29,6 +29,9 @@
     margin-right: 1rem;
 
 }
+#logout{
+        margin-top: -0.2rem;
+}
 #add:hover{
     color:grey;
 }
@@ -43,6 +46,29 @@
     color: darken(white,10) !important;
 }
 @media (max-width: $desktop-breakpoint){
+.rbt-input-main.form-control.rbt-input{
+    width: 35rem;
+    color: white !important;
+}
+.navbar{
+    line-height: 0.8rem;
+}
+#add{
+    color:white;
+    margin-left: -0.6rem;
+    margin-bottom: -0.5rem;
+    
+
+}
+#dashboard{
+    margin-left: -0.6rem;
+}
+}
+#logout{
+    margin-left: -1rem;
+    margin-top: 0.2rem;
+}
+@media (max-width: 900px){
 .rbt-input-main.form-control.rbt-input{
     width: 35rem;
     color: white !important;
