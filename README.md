@@ -1,7 +1,6 @@
 Personal movie library, add movies, rate movies, make notes
 
-Built using React, Node.js, MongoDB and Express
-
+Built using React, Node.js, MongoDB and Express + omdb API
 live demo @ https://personalmoviedb.herokuapp.com/
 
 if you get an application error, refresh the page
