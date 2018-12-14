@@ -1,3 +1,29 @@
+Personal movie library, add movies, rate movies, make notes
+
+Built using React, Node.js, MongoDB and Express
+
+live demo @ https://personalmoviedb.herokuapp.com/
+
+if you get an application error, refresh the page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
